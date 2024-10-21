@@ -2,26 +2,992 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: black !important;
+  width: 100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", sans-serif;
+}
+
+a,
+p,
+li {
+  font-family: "Urbanist", sans-serif;
+}
+
+/* ................................Header.................................... */
+/* .navbar{
+  width: 80px;
+  background: none !important;
+  display: none !important;
 } */
+.hide {
+  display: none !important;
+}
+
+.top {
+  background-image: url('../assets/images/bg-image.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-position-x: center;
+  width: 100%;
+  height: 100vh !important;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.nav-div {
+  display: flex !important;
+  width: 60%;
+  justify-content: space-between !important;
+}
+
+/* .navbar-nav {
+  border: 1px solid black;
+} */
+
+.name {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+}
+
+/* ...........................................Intr0........................... */
+
+.header-sec>a:hover,
+nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+
+.intro {
+  width: 60%;
+  padding-left: 280px;
+  padding-top: 100px;
+  color: white;
+}
+
+.intro>h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+
+.intro>h3 {
+  font-size: 50px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0099FF;
+  transform: translateX(0);
+
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+.contact-button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 30px;
+  font-size: 20px;
+  background: linear-gradient(to right, #85116B, #46438F);
+  color: white;
+}
+
+.contact-button>a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+  padding: 15px;
+  width: 100%;
+}
+
+.image-main-div {
+  width: 40%;
+  height: 500px;
+}
+
+.my-image {
+  background: linear-gradient(to right, #040738, #044CBF, skyblue);
+  border-radius: 50%;
+  padding: 20px;
+  border: 10px solid white;
+  width: 500px;
+  height: 500px;
+
+}
+
+.my-image>img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  aspect-ratio: 3/2;
+}
+
+.center {
+  padding: 30px;
+  background-color: #F6FAFE;
+}
+
+.about {
+  margin-top: 20px;
+  margin: auto;
+  width: 80%;
+}
+
+.about>h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #2aa0c6;
+  text-align: center;
+}
+
+.about>p {
+  width: 100%;
+  font-size: 18px;
+  line-height: 35px;
+  opacity: 0.9;
+  text-transform: capitalize;
+  word-spacing: 5px;
+  text-align: left;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* ..........................................Skills....................................................... */
+.skills-h1 {
+  text-align: center;
+}
+
+.skills-h1>h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #2aa0c6;
+}
+
+.skills-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.skills-div img {
+  width: 70%;
+  padding: 30px;
+  object-fit: contain;
+  aspect-ratio: 3/2;
+  height: 150px;
+}
+
+.bootstrap,
+.firebase {
+  padding: 10px !important
+}
+
+.javascript {
+  padding: 20px !important;
+}
+
+.material-ui,
+.typescript,
+.react,
+.next,
+.node,
+.mysql {
+  padding: 40px !important;
+}
+
+/* .nextjs>img {
+  width: 120px;
+  height: 120px;
+} */
+
+.skills-content {
+  background-color: #FBFBFB;
+  border-radius: 10px;
+  width: 20%;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-content>h3 {
+  font-size: 25px;
+  color: #000724;
+  opacity: 0.8;
+  text-align: center;
+}
+
+
+/* .....................................Projects................................................ */
+#projects {
+  width: 100%;
+  padding: 10px;
+  color: #ffffff;
+  background: transparent linear-gradient(180deg, #0C0D22 0%, #0A0E29 16%, #090E34 35%, #08103E 56%, #091349 75%, #04165E 100%) 0% 0% no-repeat padding-box;
+}
+
+#projects h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.projects-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 30px;
+  gap: 20px;
+}
+
+.projects-left {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+}
+
+.projects-left h3 {
+  font-weight: bold;
+}
+
+.projects-left P {
+  font-size: 14px;
+}
+
+.live-btn {
+  width: 130px;
+  padding: 10px;
+  background-color: #2aa0c6;
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+
+.live-btn:hover {
+  background-color: white;
+  color: #2aa0c6;
+}
+
+.source-code-btn {
+  width: 130px;
+  border: none;
+  padding: 10px;
+  background-color: white;
+  color: #2aa0c6;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+.source-code-btn:hover {
+  background-color: #2aa0c6;
+  color: white;
+}
+
+.project-right {
+  width: 60%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.project-right img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .........................................Contact-Form............................................... */
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+form {
+  width: 80%;
+  padding: 10px;
+}
+
+.form {
+  background-color: #F6FAFE;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px #F6FAFE;
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+.form h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.form p {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.form input {
+  width: 80%;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.form #message {
+  width: 80%;
+  height: 200px;
+  font-size: 18px;
+  padding-bottom: 150px;
+}
+
+.form button {
+  width: 80%;
+  height: 50px;
+  font-size: 22px;
+  background: linear-gradient(to bottom, #002078, #000724);
+  color: white;
+  border: none;
+  margin-top: 10px;
+}
+
+.form button:hover {
+  background-color: rgb(161, 215, 236);
+
+}
+
+.bottom {
+  background: transparent linear-gradient(180deg, #0C0D22 0%, #0A0E29 16%, #090E34 35%, #08103E 56%, #091349 75%, #04165E 100%) 0% 0% no-repeat padding-box;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.bottom .top-link {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 50px;
+
+}
+
+.top-link a {
+  color: white;
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+
+}
+
+.top-link a:hover {
+  transform: scale(1.2);
+
+}
+
+.bottom .fonts {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.fonts a {
+  color: white;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.fonts a:hover {
+  transform: scale(1.3);
+  /* position: relative;
+  bottom: 10px; */
+}
+
+.line {
+  border: 1px solid white;
+  width: 50%;
+  margin-top: 20px;
+}
+
+/* #box{
+  width: 50%;
+  height: 500px;
+  border: 3px solid white;
+  margin: auto;
+  background: 
+  linear-gradient(to right bottom,red,blue,green,gray,salmon);
+} */
+@media only screen and (max-width: 1440px) {
+  .intro {
+    padding-left: 200px;
+  }
+
+}
+
+/* ................................Media Queries In Laptop.........................ma.... */
+
+@media only screen and (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+
+  .intro {
+    width: 50%;
+    padding: 100px 0 0 20px;
+  }
+
+  .image-main-div {
+    padding-top: 80px;
+  }
+
+  .my-image {
+    width: 400px;
+    height: 400px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0px;
+  }
+
+  .header-h1 {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .header-sec {
+    margin-top: -15px;
+    padding-left: 0;
+  }
+
+  .header-sec>a {
+    font-weight: bold;
+    margin: 40px;
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  .header-sec>a:hover {
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: calc(2px);
+  }
+
+  .form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+
+  /* .navbar{
+      display: block !important;
+      position: absolute !important;
+      top: 2%;
+      right: 0%;
+     
+  } */
+  .top {
+    height: auto !important;
+    padding-bottom: 100px;
+  }
+
+  .navbar-div {
+    background-color: rgba(0, 0, 0, 0.274);
+  }
+
+  .navbar a {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header-h1 {
+    margin-left: 60px;
+  }
+
+  .header-sec {
+    display: none;
+  }
+
+  /* .center {
+      padding-left: 130px;
+      display: block;
+  } */
+
+  .intro {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .image-main-div {
+    width: 100%;
+    padding: 0;
+    height: auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-button {
+    margin: auto;
+  }
+
+  .center {
+    padding: 0;
+  }
+
+  .about {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about>p {
+    font-size: 18px;
+  }
+
+  .skills-content {
+    width: 30%;
+  }
+
+  .projects-div {
+    border: 1px solid white;
+  }
+
+  .projects-left {
+    width: 100%;
+    border: none;
+  }
+
+  .project-right {
+    width: 100%;
+    padding: 20px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .form {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 425px) and (min-width: 321px) {
+  /* .navbar{
+      display: block !important;
+      position: absolute !important;
+      top: 2%;
+      right: 2%;
+     
+  } */
+
+  .top {
+    height: auto !important;
+    padding-bottom: 100px;
+  }
+
+  .name {
+    width: auto;
+    padding-left: 10px;
+  }
+
+  .navbar-div {
+    background-color: rgba(0, 0, 0, 0.274);
+  }
+
+  .navbar a {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .nav-ul {
+    width: 50% !important;
+    height: 60% !important;
+  }
+
+  .header-sec {
+    display: none;
+  }
+
+  .intro {
+    width: 100%;
+    padding: 0 0 0 40px;
+  }
+
+  .intro>h1 {
+    font-size: 30px;
+  }
+
+  .intro>h3 {
+    font-size: 35px;
+  }
+
+  .contact-button {
+    padding: 3px 25px;
+    font-size: 16px;
+  }
+
+  .image-main-div {
+    padding-top: 0;
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .my-image {
+    width: 80%;
+    height: 330px;
+  }
+
+  .center {
+    padding: 0;
+  }
+
+  .about {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about>p {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .skills-content {
+    width: 40%;
+  }
+
+  .skills-content>img {
+    width: 100%;
+    height: 100px;
+  }
+
+  .html,
+  .css,
+  .javascript,
+  .material-ui,
+  .typescript,
+  .react,
+  .next,
+  .node,
+  .mysql {
+    padding: 30px !important;
+  }
+
+  .bootstrap,
+  .mongodb {
+    padding: 20px !important;
+  }
+
+  .firebase {
+    padding: 15px;
+  }
+
+  .skills-content>h3 {
+    font-size: 18px;
+  }
+
+  .projects-div {
+    border: 1px solid white;
+  }
+
+  #projects h1 {
+    font-size: 50px;
+  }
+
+  .projects-left {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  .live-btn {
+    width: 100%;
+  }
+
+  .source-code-btn {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .project-right {
+    width: 100%;
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form input {
+    width: 90%;
+  }
+
+  .form #message {
+    width: 90%;
+  }
+
+  .form button {
+    width: 90%;
+  }
+
+  .bottom .top-link,
+  .bottom .fonts {
+    width: 100%;
+    border: 1px solid white;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+
+  /* .navbar{
+      display: block !important;
+      position: absolute !important;
+      top: 2%;
+      right: 2%;
+     
+  } */
+  .top {
+    border: 1px solid black;
+    height: auto !important;
+    padding-bottom: 100px;
+    background-position: right;
+  }
+
+  .name {
+    width: auto;
+    padding-left: 10px;
+  }
+
+  .navbar-div {
+    background-color: rgba(0, 0, 0, 0.274);
+  }
+
+  .navbar a {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .nav-ul {
+    width: 50% !important;
+    height: 60% !important;
+  }
+
+  .top {
+    background-position: left;
+    width: 100%;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .header-sec {
+    display: none;
+  }
+
+  .intro {
+    width: 100%;
+    padding: 0 0 0 40px;
+  }
+
+  .intro>h1 {
+    font-size: 25px;
+  }
+
+  .intro>h3 {
+    font-size: 30px;
+  }
+
+  .contact-button {
+    padding: 3px 25px;
+  }
+
+  .image-main-div {
+    padding-top: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .my-image {
+    width: 80%;
+    height: 250px;
+  }
+
+  .center {
+    padding: 0;
+  }
+
+  .about {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .about>p {
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .skills-content {
+    width: 40%;
+  }
+
+  .skills-content>img {
+    width: 100%;
+    height: 100px;
+  }
+
+  .html,
+  .css,
+  .javascript,
+  .material-ui,
+  .typescript,
+  .react,
+  .next,
+  .node,
+  .mysql {
+    padding: 30px !important;
+  }
+
+  .bootstrap,
+  .mongodb {
+    padding: 20px !important;
+  }
+
+  .firebase {
+    padding: 15px;
+  }
+
+  .skills-content>h3 {
+    font-size: 16px;
+  }
+
+  .projects-div {
+    border: 1px solid white;
+  }
+
+  #projects h1 {
+    font-size: 50px;
+  }
+
+  .projects-left {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+
+  .live-btn {
+    width: 100%;
+  }
+
+  .source-code-btn {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .project-right {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-form {
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  form {
+    width: 100%;
+    padding: 0;
+
+  }
+
+  .form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form input {
+    width: 90%;
+  }
+
+  .form #message {
+    width: 90%;
+  }
+
+  .form button {
+    width: 90%;
+  }
+
+  .bottom .top-link,
+  .bottom .fonts {
+    width: 100%;
+    border: 1px solid white;
+  }
+
+}
