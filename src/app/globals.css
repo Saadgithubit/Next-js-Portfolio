@@ -345,8 +345,8 @@ form {
 }
 
 .form {
-  background-color: #F6FAFE;
-  border-radius: 10px;
+  background-color: #9fa6ad;
+  border-radius: 20px;
   box-shadow: 10px 10px 30px #F6FAFE;
   width: 70%;
   padding: 20px;
@@ -363,7 +363,7 @@ form {
 
 .form p {
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -386,15 +386,14 @@ form {
   width: 80%;
   height: 50px;
   font-size: 22px;
-  background: linear-gradient(to bottom, #002078, #000724);
+  background: rgb(47, 127, 158);
   color: white;
   border: none;
   margin-top: 10px;
 }
 
 .form button:hover {
-  background-color: rgb(161, 215, 236);
-
+  background: linear-gradient(to bottom, #28aebf, #02cee8);
 }
 
 .bottom {
