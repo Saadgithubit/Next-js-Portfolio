@@ -38,7 +38,7 @@ export default function Home() {
 
         <div className="intro-section">
           <div className="intro" data-aos="fade-right">
-            <h1>Hii,</h1>
+            <h1>Hi,</h1>
             <h1 className="my-name">This Is Saad Ahmed.</h1>
             <h3>Web Developer</h3>
             <br /><br />
