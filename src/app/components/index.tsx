@@ -64,7 +64,7 @@ export default function MyProjects() {
                                 <Image className="w-[80%] h-[150px] md:h-[200px] mx-auto object-fill aspect-square" src={src} alt='project' />
                             </div>
                             <div className="border-b-2 border-white opacity-80 h-4"></div>
-                            <CardContent className="text-center opacity-90">
+                            <CardContent className="text-center opacity-90 text-white">
                                 <Typography className="font-bold text-2xl" gutterBottom variant="h5" component="div">
                                     {title}
                                 </Typography>
