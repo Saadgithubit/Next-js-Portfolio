@@ -28,14 +28,15 @@ export default function Navbar() {
                 <Toolbar sx={{ color: 'white', display: 'flex', justifyContent: 'space-between', py: { xs: 2, md: 4 } }}>
                     <Typography sx={{
                         fontSize: { xs: '30px', md: '40px', fontWeight: 'bold' }
-                    }} className='w-[90%] lg:w-[40%] flex lg:justify-center pl-5 lg:pl-0 lg:pr-4' variant="h6" component="div">
+                    }} className='w-[90%] lg:w-[40%] flex lg:justify-center pl-5 lg:pl-0 lg:pr-4 font-outfit' variant="h6" component="div">
                         Saad Ahmed
                     </Typography>
                     <Box sx={{ width: '60%', display: { xs: 'none', md: 'block' } }}>
                         <ul className='flex justify-center text-xl font-semibold gap-x-16'>
                             {menu.map((item, index) => {
                                 return (
-                                    <li key={index} className='hover:text-[#0099FF] cursor-pointer hover:underline'><Link href={`#${item.toLowerCase()}`}>{item}</Link></li>
+                                    <li key={index} className='hover:text-[#0099FF] cursor-pointer hover:underline'>
+                                        <Link className='font-urbanist' href={`#${item.toLowerCase()}`}>{item}</Link></li>
                                 )
                             })}
                         </ul>
