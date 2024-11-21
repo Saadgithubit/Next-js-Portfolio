@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -412,61 +416,11 @@ form {
 
 .bottom {
   background: transparent linear-gradient(180deg, #0C0D22 0%, #0A0E29 16%, #090E34 35%, #08103E 56%, #091349 75%, #04165E 100%) 0% 0% no-repeat padding-box;
-  width: 100%;
-  color: white;
-  height: 300px;
-  display: flex;
-  border-radius: 10px;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.bottom .top-link {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  font-size: 50px;
-
-}
-
-.top-link a {
-  color: white;
-  text-decoration: none;
-  transition: all ease-in-out 0.2s;
-
 }
 
 .top-link a:hover {
   transform: scale(1.2);
-
-}
-
-.bottom .fonts {
-  width: 50%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 30px;
-  padding: 20px;
-}
-
-.fonts a {
-  color: white;
-  cursor: pointer;
-  transition: all ease-in-out 0.2s;
-}
-
-.fonts a:hover {
-  transform: scale(1.3);
-  /* position: relative;
-  bottom: 10px; */
-}
-
-.line {
-  border: 1px solid white;
-  width: 50%;
-  margin-top: 20px;
+  
 }
 
 /* #box{
@@ -537,6 +491,10 @@ form {
   .form {
     width: 80%;
   }
+}
+.bottom .fonts{
+  width: 65% !important;
+  border: 1px solid white;
 }
 
 @media only screen and (max-width: 768px) and (min-width: 426px) {
