@@ -1,5 +1,4 @@
 import { faFacebook, faGithub, faInstagram, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
@@ -20,7 +19,6 @@ export default function Footer() {
 
             </div>
             <div className="w-[90%] sm:w-[70%] lg:w-[60%] xl:w-1/2 border-2 mt-5">
-
             </div>
         </div>
     )

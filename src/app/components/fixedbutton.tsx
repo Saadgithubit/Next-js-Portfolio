@@ -7,8 +7,7 @@ import { useEffect, useState } from "react";
 
 export default function FixedButton() {
     const [isVisible, setIsVisible] = useState(false);
-    const [isVisibleCall, setIsVisibleCall] = useState(true);
-
+    const isVisibleCall = true
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 300) {
